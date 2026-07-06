@@ -553,6 +553,75 @@
     width: 100%;
     display: block;
   }
+  /* ── FAQ ── */
+  .faq-accent {
+    background: linear-gradient(135deg, #38B6FF 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .faq-sub {
+    text-align: center;
+    color: var(--muted);
+    font-size: 17px;
+    margin-top: -24px;
+    margin-bottom: 44px;
+  }
+  .faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .faq-item {
+    border: 1px solid rgba(59,130,246,0.14);
+    background: linear-gradient(180deg, #0c1220 0%, #131b2e 100%);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+  }
+  .faq-item[open] { border-color: rgba(56,182,255,0.4); }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.4;
+    text-align: left;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: #60a5fa; }
+  .faq-toggle {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
+  .faq-item[open] .faq-toggle { transform: rotate(45deg); }
+  .faq-answer {
+    padding: 0 24px 22px;
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: left;
+  }
+  .faq-answer p { margin: 0; }
 </style>
 </head>
 <body>
@@ -850,6 +919,58 @@
       <div class="for-check">✓</div>
       <div class="for-text">Wants to build a body he can maintain without his entire life revolving around it</div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="section">
+  <p class="section-label">Straight answers</p>
+  <h2 class="section-title">Frequently Asked <span class="faq-accent">Questions</span></h2>
+  <p class="faq-sub">The stuff blokes ask before they sign up. Straight answers, no fluff.</p>
+
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary><span>I've tried everything and fallen off before. Why would this be any different?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>Most programs hand you a plan and leave you to figure it out alone — that's exactly why they fall apart. You get a dedicated coach who checks in every week and adjusts the plan the moment life gets in the way. That's why 98% of our guys are still going strong past the first 90 days.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>I'm flat out. How many hours a week does this actually take?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>3 to 4 hours of training a week — not 3 to 4 hours a day. The nutrition side is built around your real life: work dinners, travel and weekends all included. This was designed for busy men who don't have spare time to burn.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Do I have to go keto, carnivore or quit carbs?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>No. No banned foods, no extreme diets, no living off chicken and rice. We build the plan around the food you actually enjoy — so you can hold onto the results long after the program ends.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>I hate gyms. Can I train at home?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>Absolutely. Gym or home — we build the training around whatever equipment you've got and wherever you're most likely to actually show up. No commute required.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>I travel a lot and enjoy a drink. Will that wreck it?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>It won't. The whole system is designed for real life — eating out, hotel stays and a few beers with the boys included. You'll learn how to keep moving forward without putting your life on hold.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>What about Ozempic and the weight-loss jabs?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>You don't need them here. We fix the habits, training and nutrition that actually keep the weight off — so you build a body you can maintain on your own, not one you're renting from a prescription.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>How quickly will I actually see results?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>Most guys feel different within 2 weeks and see visible change by week 4 to 6. Across our 3,000+ members the average is 10 to 15kg down in the first 12 weeks.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>What does it cost — and do I have to pay it all upfront?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>Basecamp is $3,250 paid in full, or $250 to start and $125 per week. Most guys choose the weekly option. Either way you get the full program from day one.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>Is the call just going to be a hard sell?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>No pressure, no scripts. The call is about your goals and whether we're genuinely the right fit for each other. If we're not, we'll tell you straight.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary><span>When do I start?</span><span class="faq-toggle">+</span></summary>
+      <div class="faq-answer"><p>As soon as you send the message. We onboard you within 24 to 48 hours, you meet your coach, and you're off.</p></div>
+    </details>
   </div>
 </section>
 
