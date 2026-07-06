@@ -157,8 +157,8 @@
     margin: 0 auto;
     padding: 40px 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 20px;
     text-align: center;
   }
 
@@ -166,15 +166,21 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: clamp(32px, 5vw, 52px);
-    color: var(--blue);
+    background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
     line-height: 1;
     margin-bottom: 8px;
   }
 
   .stat-label {
-    font-size: 13px;
-    color: #aaa;
+    font-size: 12px;
+    color: #64748b;
     line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
   }
 
   /* ── BEFORE/AFTER GRID ── */
@@ -500,7 +506,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
-    .stats-inner { grid-template-columns: 1fr; gap: 28px; }
+    .stats-inner { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
     .ba-grid { grid-template-columns: 1fr; }
     .testi-grid { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr; }
@@ -661,16 +667,20 @@
 <div class="stats-strip">
   <div class="stats-inner">
     <div>
-      <div class="stat-num slot" id="stat1" data-final="3000+">0</div>
-      <div class="stat-label">Men transformed since 2018</div>
+      <div class="stat-num slot" id="stat1" data-final="4,000+">0</div>
+      <div class="stat-label">Transformations</div>
     </div>
     <div>
-      <div class="stat-num slot" id="stat2" data-final="10-15KG">0</div>
-      <div class="stat-label">Average fat loss in the first 12 weeks</div>
+      <div class="stat-num slot" id="stat2" data-final="20+">0</div>
+      <div class="stat-label">Countries</div>
     </div>
     <div>
-      <div class="stat-num slot" id="stat3" data-final="98%">0</div>
-      <div class="stat-label">Client retention past the first 90 days</div>
+      <div class="stat-num slot" id="stat3" data-final="12+">0</div>
+      <div class="stat-label">Years coaching</div>
+    </div>
+    <div>
+      <div class="stat-num slot" id="stat4" data-final="98%">0</div>
+      <div class="stat-label">Finish rate</div>
     </div>
   </div>
 </div>
@@ -678,9 +688,10 @@
 <script>
 (function() {
   const slots = [
-    { el: document.getElementById('stat1'), chars: '0123456789+', final: '3000+' },
-    { el: document.getElementById('stat2'), chars: '0123456789KG-', final: '10-15KG' },
-    { el: document.getElementById('stat3'), chars: '0123456789%', final: '98%' },
+    { el: document.getElementById('stat1'), chars: '0123456789,+', final: '4,000+' },
+    { el: document.getElementById('stat2'), chars: '0123456789+', final: '20+' },
+    { el: document.getElementById('stat3'), chars: '0123456789+', final: '12+' },
+    { el: document.getElementById('stat4'), chars: '0123456789%', final: '98%' },
   ];
 
   function randomChar(chars) {
