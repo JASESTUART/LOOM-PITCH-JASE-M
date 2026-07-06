@@ -260,21 +260,32 @@
   /* ── VIDEO TESTIMONIALS ── */
   .testi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
   }
 
   .testi-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .testi-quote {
     background: var(--grey);
     border: 1px solid var(--grey2);
-    border-radius: 6px;
-    overflow: hidden;
+    border-radius: 14px;
+    padding: 20px 22px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #e8e8e8;
   }
 
   .testi-video {
     background: var(--grey2);
-    aspect-ratio: 16/9;
+    aspect-ratio: 9/16;
     position: relative;
+    border-radius: 14px;
+    overflow: hidden;
   }
 
   .testi-video iframe {
@@ -304,7 +315,7 @@
   }
 
   .testi-info {
-    padding: 14px 16px;
+    padding: 2px 4px;
   }
 
   .testi-name {
@@ -747,63 +758,63 @@
   <div class="testi-grid">
 
     <div class="testi-card">
+      <div class="testi-quote">"Within the first three months I lost 10 kilos, gained a stack of muscle, and felt fantastic. Eight months later I'm still holding the same weight and the same muscle."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/686562089" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">Brent Thoroughgood</div>
         <div class="testi-tag">Lost 10kg, gained muscle — still holding it 8 months later</div>
-        <div class="testi-quote">"Within the first three months I lost 10 kilos, gained a stack of muscle, and felt fantastic. Eight months later I'm still holding the same weight and the same muscle."</div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-quote">"I'd tried a lot of diets and couldn't shift the weight. 23 weeks in, I've lost around 22 kilos and 24 centimetres off the gut."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/686562155" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">Terry Holden</div>
         <div class="testi-tag">Lost 22kg and 24cm off the waist in 23 weeks</div>
-        <div class="testi-quote">"I'd tried a lot of diets and couldn't shift the weight. 23 weeks in, I've lost around 22 kilos and 24 centimetres off the gut."</div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-quote">"12 months ago I was around 100 kilos, hadn't been to the gym in 20 years. Since joining BBA I'm down to 81 kilos and I'm never going back."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/686542699" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">Alex Render</div>
         <div class="testi-tag">Down 19kg — back at the gym, kayaking, playing golf</div>
-        <div class="testi-quote">"12 months ago I was around 100 kilos, hadn't been to the gym in 20 years. Since joining BBA I'm down to 81 kilos and I'm never going back."</div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-quote">"A year on I'm sitting at 68 kilos, over 30 kilos less than when I started. If you're sitting on the fence, don't hesitate."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/686544399" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">Balraj Singh</div>
         <div class="testi-tag">Lost 30kg — started for a wedding, never looked back</div>
-        <div class="testi-quote">"A year on I'm sitting at 68 kilos, over 30 kilos less than when I started. If you're sitting on the fence, don't hesitate."</div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-quote">"18 months in the BBA and I've lost over 65 kilograms and around 46 centimetres off the waist. If you're sitting on the fence — come and change your life."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/1105200317" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">Chris Lupton</div>
         <div class="testi-tag">Lost 65kg and 46cm off the waist in 18 months</div>
-        <div class="testi-quote">"18 months in the BBA and I've lost over 65 kilograms and around 46 centimetres off the waist. If you're sitting on the fence — come and change your life."</div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-quote">"18 weeks in and I've lost 12 kilos and over 20 centimetres around my waist. It's changed my mindset and my way of life."</div>
       <div class="testi-video">
         <iframe src="https://player.vimeo.com/video/646451114" allowfullscreen allow="autoplay; fullscreen"></iframe>
       </div>
       <div class="testi-info">
         <div class="testi-name">John J</div>
         <div class="testi-tag">Lost 12kg and 20cm in 18 weeks</div>
-        <div class="testi-quote">"18 weeks in and I've lost 12 kilos and over 20 centimetres around my waist. It's changed my mindset and my way of life."</div>
       </div>
     </div>
   </div>
