@@ -18,7 +18,7 @@
     --muted: #8a93a3;
   }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
     background:
@@ -27,6 +27,7 @@
       radial-gradient(circle at 50% 50%, rgba(96,165,250,0.05), transparent 70%),
       linear-gradient(180deg, #05070d 0%, #0a1020 100%);
     background-attachment: fixed;
+    overflow-x: hidden;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -125,6 +126,22 @@
     margin: 0 auto;
     padding: 60px 20px;
     text-align: center;
+  }
+
+  /* Full-width alternating section band (matches Split men.html) */
+  .band {
+    position: relative;
+  }
+  .band::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #0a1020 0%, #05070d 100%);
+    z-index: -1;
   }
 
   .section-label {
@@ -777,7 +794,7 @@
 </script>
 
 <!-- BEFORE/AFTER GALLERY -->
-<section style="padding:40px 0 0;">
+<section class="band" style="padding:40px 0 60px;">
   <p class="section-label" style="text-align:center;margin-bottom:24px;">Real results</p>
   <div style="position:relative;">
     <div class="tk-wrap">
@@ -871,7 +888,7 @@
 <div class="divider"></div>
 
 <!-- VIDEO TESTIMONIALS -->
-<section class="section">
+<section class="section band">
   <p class="section-label">Hear it from them</p>
   <h2 class="section-title">What our guys say when they're done</h2>
   <div class="testi-grid">
@@ -963,7 +980,7 @@
 <div class="divider"></div>
 
 <!-- FAQ -->
-<section class="section">
+<section class="section band">
   <p class="section-label">Straight answers</p>
   <h2 class="section-title">Frequently Asked <span class="faq-accent">Questions</span></h2>
   <p class="faq-sub">The stuff blokes ask before they sign up. Straight answers, no fluff.</p>
