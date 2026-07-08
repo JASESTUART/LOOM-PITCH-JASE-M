@@ -59,6 +59,42 @@
     color: #00AEEF;
   }
 
+  /* ── HERO BLOCK (dark, glow-at-top — matches Split men.html hero) ── */
+  .hero-block {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  /* top-center blue glow orb */
+  .hero-block::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    max-width: 130vw;
+    height: 900px;
+    border-radius: 50%;
+    background: rgba(56,182,255,0.15);
+    filter: blur(160px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  /* darkening mask: transparent at top-center, solid by 70% */
+  .hero-block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, transparent 0%, #05070d 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-block > * {
+    position: relative;
+    z-index: 2;
+  }
+
   /* ── HERO ── */
   .hero {
     padding: 60px 20px 40px;
@@ -107,10 +143,11 @@
 
   .video-wrap {
     position: relative;
-    border-radius: 6px;
+    border-radius: 16px;
     overflow: hidden;
-    background: var(--grey);
-    border: 1px solid var(--grey2);
+    background: #0a0b14;
+    border: 1px solid rgba(56,182,255,0.30);
+    box-shadow: 0 20px 60px -20px rgba(56,182,255,0.4);
   }
 
   .video-wrap iframe {
@@ -705,6 +742,7 @@
 </div>
 
 <!-- HERO -->
+<div class="hero-block">
 <section class="hero">
   <h1>I made this video for you. <span>Watch it.</span></h1>
   <p class="sub">I'll show you exactly what we do, why it works, and whether it's the right fit for you.</p>
@@ -741,6 +779,7 @@
       <div class="stat-label">Finish rate</div>
     </div>
   </div>
+</div>
 </div>
 
 <script>
